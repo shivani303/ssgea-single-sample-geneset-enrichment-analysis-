@@ -97,7 +97,8 @@ View(mat)
 library(ComplexHeatmap)
 
 library(circlize)
-** HEATMAP **
+
+# HEATMAP
 
 Heatmap(t(mat),col= colorRamp2(c(-2,0,2),c("green","white","yellow")))  
 
