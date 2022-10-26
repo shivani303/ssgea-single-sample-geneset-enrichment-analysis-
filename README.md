@@ -1,4 +1,7 @@
-# ssgea-single-sample-geneset-enrichment-analysis-
+# ssgea-single-sample-geneset-enrichment-analysis
+
+Single Sample Geneset Enrichment Analysis, extension of GSEA method, working at the level of a single sample rather than a sample population as in the original GSEA application.
+ssGSEA reflects the degree of input gene up- or downregulated within a sample.
 
 **calling library**
 
