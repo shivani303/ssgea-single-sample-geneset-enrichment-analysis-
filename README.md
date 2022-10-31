@@ -12,7 +12,19 @@ library(circlize)
 **read the data**
 
 data1= readRDS("log.RDS")
-gene_set= read.csv("C:/Users/shiva/Desktop/shivani college/rgitbt/cancer genomics/genes/markers2Sep.csv")
+
+**reading all genes file together**
+
+data_files <- list.files("C:/Users/shiva/Desktop/shivani college/rgitbt/cancer genomics/genes", full.names= T)  
+data_files 
+gene_set= matrix(NA,ncol= length(data_files),nrow= 10000)
+
+for(i in 1:length(data_files)) {                              
+  df= read.csv(data_files[i])
+  gene_set[,i]= df[1:1000, 1]
+  
+}
+colnames(gene_set) <- c('Gender','Leukemia','p53')
 View(gene_set)
 gene_sets= as.list(as.data.frame(gene_set))
 
@@ -103,8 +115,12 @@ library(circlize)
 
 # HEATMAP
 
-Heatmap(t(mat),col= colorRamp2(c(-2,0,2),c("green","white","yellow")))  
+Heatmap(t(mat),col= colorRamp2(c(-2,0,2),c("purple","white","pink")))  
 
-![image](https://user-images.githubusercontent.com/66779651/197950042-106ceb9b-3391-45d3-b271-90ebe6e5e0b8.png)
+![image](https://user-images.githubusercontent.com/66779651/199063404-93ab1bd9-7050-42fd-8941-d69baad1aba0.png)
+
+# Interpretation
+
+In heat maps the data is displayed in a grid where each row represents a gene and each column represents a sample. The colour and intensity of the boxes is used to represent changes (not absolute values) of gene expression. In the example above, pink represents up-regulated genes and purple represents down-regulated genes. White represents unchanged expression.
 
             
