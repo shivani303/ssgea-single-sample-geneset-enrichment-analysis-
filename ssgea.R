@@ -1,8 +1,20 @@
+#reading all genes file together
+
+data_files <- list.files("C:/Users/shiva/Desktop/shivani college/rgitbt/cancer genomics/genes", full.names= T)  
+data_files 
+gene_set= matrix(NA,ncol= length(data_files),nrow= 10000)
+
+for(i in 1:length(data_files)) {                              
+  df= read.csv(data_files[i])
+  gene_set[,i]= df[1:1000, 1]
+  
+}
+colnames(gene_set) <- c('Gender','Leukemia','p53')
+View(gene_set)
+
 library(matrixStats)
 library(circlize)
 data1= readRDS("log.RDS")
-gene_set= read.csv("C:/Users/shiva/Desktop/shivani college/rgitbt/cancer genomics/genes/markers2Sep.csv")
-View(gene_set)
 gene_sets= as.list(as.data.frame(gene_set))
 #function
 ssgsea = function(X, gene_sets, alpha = 0.25, scale = T, norm = F, single = T) {
