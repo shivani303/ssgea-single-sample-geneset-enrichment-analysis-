@@ -115,9 +115,10 @@ library(circlize)
 
 # HEATMAP
 
-Heatmap(t(mat),col= colorRamp2(c(-2,0,2),c("purple","white","pink")))  
+Heatmap(t(mat))  
 
-![image](https://user-images.githubusercontent.com/66779651/199063404-93ab1bd9-7050-42fd-8941-d69baad1aba0.png)
+![image](https://user-images.githubusercontent.com/66779651/199910847-d731e78c-7444-46ce-b3c8-2c73d41e0b55.png)
+
 
 # Interpretation
 
