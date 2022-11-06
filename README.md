@@ -122,6 +122,7 @@ Heatmap(t(mat))
 
 # Interpretation
 
-In heat maps the data is displayed in a grid where each row represents a gene and each column represents a sample. The colour and intensity of the boxes is used to represent changes (not absolute values) of gene expression. In the example above, pink represents up-regulated genes and purple represents down-regulated genes. White represents unchanged expression.
-
+In heat maps the data is displayed in a grid where each row represents a gene and each column represents a sample. The colour and intensity of the boxes is used to represent changes (not absolute values) of gene expression. In the example above, dark brown represents up-regulated genes and  yellow represents down-regulated genes. White represents unchanged expression.
+-Leukemia genes are highly expressed in the sample.
+Datasets dowloaded from gsea database.
             
